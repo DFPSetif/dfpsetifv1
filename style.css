@@ -62,8 +62,7 @@ section {
 	display : flex;
 	flex-direction : column;
 	align-items : center;
-	min-height : 30vh;
-	padding : 100px 20vw;
+	
 }
 img {
 	display : block;
@@ -94,7 +93,7 @@ img {
 }
 header,
 section {
-	padding : 3rem 0;
+	padding : 2rem 0 3rem;
 }
 .blue {
 	background : var(--clr-blue);
@@ -206,4 +205,43 @@ section {
 
 .wave-footer {
     fill: var(--clr-white);
+}
+/*header section*/
+.title strong {
+	display : block;
+	color : var(--clr-white);
+}
+.subtitle {
+	padding : 10px;
+	background : var(--clr-primary-400);
+	color  : var(--clr-neutral-100);
+	margin-bottom : 1em;
+}
+.intro-img {
+	box-shadow : var(--bs);
+	/*float : left;*/
+
+}
+.intro {
+	padding : 0 1em;
+}
+
+.title {}
+.intro__titles {
+	
+	text-align : right;
+}
+.section__sebtitle--intro {
+	display : block;
+}
+@media (min-width : 600px){
+	.intro {
+	
+	}
+	.intro-img {
+		float : left;
+	}
+	.section__sebtitle--intro {
+		
+	}
 }
