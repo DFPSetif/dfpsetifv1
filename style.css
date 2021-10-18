@@ -65,6 +65,37 @@ section {
 	min-height : 30vh;
 	padding : 100px 20vw;
 }
+img {
+	display : block;
+	max-width : 100%;
+}
+@media (min-width : 40em){
+	img {
+		min-width : 50%;
+	}
+}
+.split {
+	display : flex;
+	flex-direction : column;
+}
+@media (min-width : 40em){
+	.split {
+		flex-direction : row;
+	}
+	.split > * {
+		flex-basis : 100%;
+	}
+	.split > * + * {
+		margin-right : 2em;
+	}
+} 
+.text-center {
+	text-align : center;
+}
+header,
+section {
+	padding : 3rem 0;
+}
 .blue {
 	background : var(--clr-blue);
 }
