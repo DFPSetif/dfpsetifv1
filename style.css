@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600&display=swap');
-/* set my commun variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+/* set my common variables */
 :root{
 	--clr-white : #FFF;
 	--clr-blue  : #3c31dd;
@@ -8,21 +10,90 @@
 	--clr-red-orange : #FF4500;
 	--clr-dark : #0f0f10;
 	
+	--ff-primary : 'El Messiri', sans-serif;
+	--ff-accent  : 'Almarai', sans-serif;
+	
+	--fw-bold: 900;
+	
+	--bs : 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+			0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+	--bs-accent : inset 5px 5px 5px rgba(0,0,0,0.2),
+				  inset -5px -5px 15px rgba(255,255,255,0.1),
+				  5px 5px 15px rgba(0,0,0,0.3),
+				  -5px -5px 15px rgba(255,255,255,0.1);
 	
 }
-* {
+/* set the common rules in css */
+*,
+*::before,
+*::after {
+	-webkit-box-sizing : border-box;
+	box-sizing : border-box;
+}
+html {
+	scroll-behavior : smooth;
+}
+body {
+	font-family : var(--ff-primary);
+	font-weight : 400;
+	font-size : 1.2125rem;
+	line-height : 1.3;
+}
+body,
+h1,
+h2,
+h3,
+p {
 	margin : 0;
-	padding: 0;
-	font-family : 'El Messiri', sans-serif;
-	color : #FFF;
+	margin-bottom : 1em;
+}
+p {
+	font-family : var(--ff-accent);
+	font-weight : 300;
+	font-size : 1rem;
+	line-height : 1.3;
+}
+strong {
+	font-weight : var(--fw-bold);
+	font-size : 1.5em;
 }
 section {
 	position : relative;
 	display : flex;
 	flex-direction : column;
 	align-items : center;
-	min-height : 30vh;
-	padding : 100px 20vw;
+	
+}
+img {
+	display : block;
+	max-width : 100%;
+}
+@media (min-width : 40em){
+	img {
+		min-width : 50%;
+	}
+}
+.split {
+	display : flex;
+	flex-direction : column;
+}
+@media (min-width : 40em){
+	.split {
+		flex-direction : row;
+	}
+	.split > * {
+		flex-basis : 100%;
+	}
+	.split > * + * {
+		margin-right : 2em;
+	}
+} 
+.text-center {
+	text-align : center;
+}
+header,
+section {
+	padding : 2rem 0 3rem;
 }
 .blue {
 	background : var(--clr-blue);
@@ -134,4 +205,43 @@ section {
 
 .wave-footer {
     fill: var(--clr-white);
+}
+/*header section*/
+.title strong {
+	display : block;
+	color : var(--clr-white);
+}
+.subtitle {
+	padding : 10px;
+	background : var(--clr-primary-400);
+	color  : var(--clr-neutral-100);
+	margin-bottom : 1em;
+}
+.intro-img {
+	box-shadow : var(--bs);
+	/*float : left;*/
+
+}
+.intro {
+	padding : 0 1em;
+}
+
+.title {}
+.intro__titles {
+	
+	text-align : right;
+}
+.section__sebtitle--intro {
+	display : block;
+}
+@media (min-width : 600px){
+	.intro {
+	
+	}
+	.intro-img {
+		float : left;
+	}
+	.section__sebtitle--intro {
+		
+	}
 }
