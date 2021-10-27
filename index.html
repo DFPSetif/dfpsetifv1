@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href = "style.css">
 </head>
 <body>
-</body>
 	<section class="blue-grotto">
 		<header class="hero text-center">
 			<div class="intro split">
@@ -30,10 +29,20 @@
 			</svg>
 		</div>
 	</section>
-	<section>
-		<h1>أهلا بكم في مديرية التكوين و التعليم المهنيين لولاية سطيف</h1>
-		<p>أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.
-			أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.</p>
+	<section class="navigation">
+		<div class="nav">
+			<span id = "hamburger" onclick = "openMenu()">☰</span>
+			<div  id = "menu" class="nav__menu">
+				<span id="close-menu" onclick = "closeMenu()">x</span>
+				<ul class = "menu__list">
+					<a href = "#about"><li>المقدمة</li></a>
+					<a href = "#services"><li>الخدمات</li></a>
+					<a href = "#covid"><li>كوفيد 19</li></a>
+					<a href = "#caravane"><li>أحداث</li></a>
+					<a href = "#contact"><li>الإتصال</li></a>	
+				</ul>
+			</div>
+		</div>
 	</section>
 	<section class= "blue-baby">
 		<h1>أهلا بكم في مديرية التكوين و التعليم المهنيين لولاية سطيف</h1>
@@ -83,4 +92,15 @@
 			</svg>
 		</div>
 	</section>
+<script>
+	function openMenu(){
+		document.getElementById("hamburger").style.display = "none";
+		document.getElementById("menu").style.display = "block";
+	}
+	function closeMenu() {
+		document.getElementById("hamburger").style.display = "block";
+		document.getElementById("menu").style.display = "none";
+	}
+</script>
+</body>
 </html>
